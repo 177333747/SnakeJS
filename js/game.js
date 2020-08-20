@@ -51,7 +51,7 @@ function drawGame(){
     ctx.drawImage(foodImg, food.x,food.y);
 
     for(let i =0; i<snake.length; i++){
-        ctx.fillStyle = i==0 ?"brown" : "green";
+        ctx.fillStyle = i==0 ?"darkgreen" : "green";
         ctx.fillRect(snake[i].x, snake[i].y, box,box);
     }
 
@@ -75,7 +75,7 @@ function drawGame(){
     if(snakeX< box || snakeX >box*17
         || snakeY <3*box ||snakeY>box*17)
         clearInterval(game);
-
+        //ne comment Dima
     if(dir =="left") snakeX -=box;
     if(dir =="right") snakeX+=box;
     if(dir== "up") snakeY -=box;
@@ -89,4 +89,4 @@ function drawGame(){
     snake.unshift(newHead);
 }
 
-let game = setInterval(drawGame,150);
+let game = setInterval(drawGame,100);
